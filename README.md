@@ -1,8 +1,8 @@
 # BrainFlump
 
-A Turing Tarpit that uses a Dump as its memory model, rather than a Stack, Tree, Heap, Queue or Tape.
+A Turing Tarpit that uses a Dump and a Cell as its memory model, rather than a Stack, Tree, Heap, Queue or Tape.
 
-What's a Dump? It's a big unordered blop of values that just spits out a random value when you pop from it.
+What's a Dump? It's a big unordered blop of values that just spits out a random value when you pop from it. A Cell is a single numerical value.
 
 Have fun!
 
