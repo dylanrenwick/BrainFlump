@@ -1,4 +1,4 @@
-#BrainFlump
+# BrainFlump
 
 A Turing Tarpit that uses a Dump as its memory model, rather than a Stack, Tree, Heap, Queue or Tape.
 
@@ -6,7 +6,7 @@ What's a Dump? It's a big unordered blop of values that just spits out a random 
 
 Have fun!
 
-##Running BrainFlump
+## Running BrainFlump
 
 BrainFlump is written in Python2 and designed for PyPy.
 
@@ -14,7 +14,7 @@ How to run: `python BrainFlump.py <mode> <code|filename>`
 
 Mode: `-c` to run code directly, `-f` to run code from a file
 
-##Using BrainFlump
+## Using BrainFlump
 
 ```
     +   Increment the Cell
