@@ -1,18 +1,32 @@
-import sys,random
-a=sys.argv
-if len(a)!=3:exit()
-if a[1]=='-f':f=open(a[2],'w');o=f.readall();f.close()
-elif a[1]=='-c':o=a[2]
-v=0
+from sys import*
+from random import*
+a=argv
+v=e=i=0
 d=[]
-for i in range(0,len(o)):
+if len(a)!=3:exit()
+if'-f'==a[1]:f=open(a[2]);o=f.read();f.close()
+if'-c'==a[1]:o=a[2]
+def L(s,c,N):
+ if s.count(c)<N:return-1
+ s=s[::-1];f=0
+ for i in range(len(s)):
+	C=s[i]
+	if c==C:f+=1
+	if f==N:return len(s)-i
+ return-1
+def F(s,c,N):
+ if s.count(c)<N:return-1
+ f=0
+ for i in range(len(s)):
+	C=s[i]
+	if C==c:f+=1
+	if f==N:return i
+ return-1
+while i<len(o):
  c=o[i]
- if c=='+':v+=1
- elif c=='-':v-=1
- elif c==':':d.append(v)
- elif c==';':v=d.pop(random.randint(0,len(d)-1))
- elif c=='(':exit()
- elif c==')':exit()
- elif c==',':v=ord(sys.stdin.read(1))
- elif c=='.':sys.stdout.write(chr(v%127))
-
+ if'('==c:e+=1;exec'i=L(o,")",e)'*(not v)
+ if')'==c:
+	if v:i=F(o,"(",e)
+	else:e-=1
+ exec['v+=1','v-=1','d.append(v)','v=d.pop(randrange(len(d)))','v=ord(stdin.read(1))','stdout.write(chr(v))','0']['+-:;,.'.find(c)]
+ i+=1
