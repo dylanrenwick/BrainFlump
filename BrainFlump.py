@@ -16,9 +16,9 @@ def L(s,c,N,r):
  return-1
 while i<len(o):
  c=o[i]
- if'('==c:e+=1;exec'i=L(o,")",e,1)'*(not v)
+ if'('==c:e+=1;exec'i=L(o,")",e,1)'*(not d.pop(randrange(len(d))))
  if')'==c:
-	if v:i=L(o,"(",e,-1)-1
+	if d.pop(randrange(len(d)))):i=L(o,"(",e,-1)-1
 	else:e-=1
  exec['v+=1','v-=1','d.append(v)','v=d.pop(randrange(len(d)))','v=ord(stdin.read(1))','stdout.write(chr(v))','0']['+-:;,.'.find(c)]
  i+=1
